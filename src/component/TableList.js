@@ -7,23 +7,20 @@ export default class TableList extends Component {
         //console.log('tableListData1 in render',this.props.tableListData)
         return (
             <table id="simple-board" className="table table-bordered">
-                <thead><tr>
+                     <tbody>
                     {this.props.tableHeader.map((header) => {
-                        return (<th key={header}>
-                            {header}
-                        </th>)
+
+                        return (
+                        <tr key={header}>
+                        <th >
+                            {header} :
+                        </th>
+                        <td >{this.props.tableListData[header]}</td>
+                        </tr>
+                        )
                     })
                     }
-                </tr></thead>
-                <tbody>{<tr>
-                    {this.props.tableHeader.map((val) => {
-                        return (
-                            <td key={val}>{this.props.tableListData[val]}</td>
-                        )
-                    })}
-                </tr>}
-                </tbody>
-
+              </tbody>
             </table>
         )
     }

@@ -5,12 +5,21 @@ export  var dummyData = {
      'BILL',
       'MEDICAL'
   ]
+,
+  dropDown2:[
+    'DRUGS',
+    'FORMULA',
+    'QUANTITY'
+ ]
   ,
 
   dropDownAutoSuggestionMap:{
     GROUP:"autoSuggestionGrp",
     MEDICAL:"autoSuggestionMedical",
-    BILL:"autoSuggestionBillTO"
+    BILL:"autoSuggestionBillTO",
+    DRUGS:"autoSuggestionGrp",
+    FORMULA:"autoSuggestionMedical",
+    QUANTITY:"autoSuggestionBillTO",
 },
   autoSuggestionGrp:[
     'shouldnt'

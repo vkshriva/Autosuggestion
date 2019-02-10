@@ -9,7 +9,7 @@ export default class AutoSuggestionInput extends Component {
     }
 
     handleClick() {
-        this.typeahead.getInstance().clear()
+        //this.typeahead.getInstance().clear()
         this.props.handleAutoSuggestionSelectedVal(this.state.selectedValue)
     }
 
@@ -27,7 +27,7 @@ export default class AutoSuggestionInput extends Component {
     render() {
         return (
             <div className="row">
-                <div className="col-sm-11">
+                <div className="col-sm-10">
                     <Typeahead
                         onChange={(selectedValue) => {
                             this.setState({ selectedValue });
@@ -38,7 +38,7 @@ export default class AutoSuggestionInput extends Component {
                         ref={(typeahead) => this.typeahead = typeahead}
                     />
                 </div>
-                <div className="col-sm-1">
+                <div className="col-sm-2">
                     <a href="#" className="btn btn-info btn-lg" onClick={this.handleClick}>
                         <span className="glyphicon glyphicon-plus"></span>+
                     </a>
