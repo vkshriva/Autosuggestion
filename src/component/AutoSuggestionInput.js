@@ -39,9 +39,7 @@ export default class AutoSuggestionInput extends Component {
                     />
                 </div>
                 <div className="col-sm-2">
-                    <a href="#" className="btn btn-info btn-lg" onClick={this.handleClick}>
-                        <span className="glyphicon glyphicon-plus"></span>+
-                    </a>
+                    <button className="btn btn-info" type="reset" onClick={this.handleClick}>+</button>            
                 </div>
             </div>
         )

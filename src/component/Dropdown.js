@@ -10,7 +10,7 @@ export default class Dropdown extends Component {
         return (
             <div>
                 <div>
-                    <select className="browser-default custom-select" onChange={(event) => { this.props.handleDropdownSelect(event.target.value) }}>
+                    <select className="col-sm-12 browser-default custom-select" onChange={(event) => { this.props.handleDropdownSelect(event.target.value) }}>
                         <option>Select</option>
                         {this.state.dropDownList.map((data) => {
                             return <option key={data} value={data}>{data}</option>
