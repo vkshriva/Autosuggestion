@@ -6,6 +6,11 @@ export default class TableList extends Component {
          tableListData:this.props.tableListData
      }
 
+  
+    getarrayValueCommaSeparated(arr){
+        return arr.toString()
+    }
+
     render() {
         //console.log('tableListData1 in render',this.props.tableListData)
         return (
@@ -19,7 +24,8 @@ export default class TableList extends Component {
                         <th >
                             {header} :
                         </th>
-                        <td >{this.props.tableListData[header]}</td>
+                        
+                        <td >{this.getarrayValueCommaSeparated(this.props.tableListData[header])}</td>
                         </tr>
                         )
                     })

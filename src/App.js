@@ -7,9 +7,9 @@ import { dummyData } from '././data/dummyData'
 import TableList from './component/TableList';
 
 const tableListData1 = {
-  [dummyData["dropDown1"][0]]: "",
-  [dummyData["dropDown1"][1]]: "",
-  [dummyData["dropDown1"][2]]: ""
+  [dummyData["dropDown1"][0]]: [],
+  [dummyData["dropDown1"][1]]: [],
+  [dummyData["dropDown1"][2]]: []
 
 }
 
@@ -56,7 +56,8 @@ class App extends Component {
    
   handleAutoSuggestionSelectedVal1(selectedVal) {
     var tableListData1 = this.state.tableListData1
-    tableListData1[this.state.dropDown1Selectedval] = selectedVal
+    var prevArr = tableListData1[this.state.dropDown1Selectedval]
+    tableListData1[this.state.dropDown1Selectedval] = [...prevArr,selectedVal]
     this.setState({ tableListData1 })
     //console.log('tableListData1',tableListData1)
     //window.tableListData1=tableListData1
@@ -109,7 +110,7 @@ class App extends Component {
               handleReset={this.handleResetTable1}/>          
           </div>
         </div>        
-        <div className="col-sm-6 border border-secondary">
+        {/*<div className="col-sm-6 border border-secondary">
           <div className="row">
           <div className="col-sm-4">
             <Dropdown dropDownList={this.state.dropDown2} handleDropdownSelect={this.handleDropdownSelect2} />
@@ -125,7 +126,7 @@ class App extends Component {
               handleReset= {this.handleResetTable2}/>
            
           </div>
-        </div>   
+    </div> */}  
         </div>         
       </div>
     );
